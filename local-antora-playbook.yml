@@ -1,0 +1,21 @@
+site:
+  title: Spring
+  start_page: ROOT::index.adoc
+asciidoc:
+  attributes:
+    page-pagination: true
+content:
+  sources:
+    - url: ./
+      branches: [HEAD]
+#    - url: ../../spring-io/spring-security-docs-generated
+#      branches: [HEAD]
+ui:
+  bundle:
+    url: https://github.com/rwinch/antora-ui-spring/releases/download/latest/ui-bundle.zip
+    snapshot: true
+
+pipeline:
+  extensions:
+    - require: ./antora/extensions/major-minor-segment.js
+    - require: ./antora/extensions/root-component-name.js

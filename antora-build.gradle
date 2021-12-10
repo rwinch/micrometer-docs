@@ -1,0 +1,13 @@
+plugins {
+    id "io.github.rwinch.antora" version "0.0.2"
+}
+
+// https://github.com/rwinch/antora-gradle-plugin
+antora {
+    // default: "antora-playbook.yml"
+    playbookFile = file("local-antora-playbook.yml")
+    // default no version (current version)
+    antoraVersion = "3.0.0-alpha.9"
+    // additional arguments (other than playbookFile) to pass to Antora. Default is emptyList
+    arguments = ["--fetch"]
+}

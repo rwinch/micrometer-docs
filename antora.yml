@@ -1,0 +1,12 @@
+name: 'ROOT'
+title: Spring Framework
+version: "6.0.0"
+nav:
+  - modules/ROOT/nav.adoc
+asciidoc:
+  attributes:
+    id: TBD_id_TBD
+    name: TBD_name_TBD
+    system: TBD_system_TBD
+    your-domain: TBD_your-domain_TBD
+    your-environment-id: TBD_your-environment-id_TBD
