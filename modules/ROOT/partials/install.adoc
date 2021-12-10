@@ -1,5 +1,5 @@
 [[installing]]
-== Installing
+= Installing
 
 For Gradle, add the following implementation:
 
