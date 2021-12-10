@@ -14,8 +14,8 @@ using at least that version.
 
 This section describes how to configure Wavefront when you send data:
 
-* <<configuring-directly-to-wavefront>>
-* <<configuring-through-a-wavefront-proxy-sidecar>>
+* xref:#configuring-directly-to-wavefront[Directly to Wavefront]
+* xref:#configuring-through-a-wavefront-proxy-sidecar[Through a Wavefront Proxy Sidecar]
 
 [[configuring-directly-to-wavefront]]
 === Directly to Wavefront
@@ -93,7 +93,7 @@ If `publishPercentileHistogram` is enabled, the Wavefront `Timer` produces histo
 that let you query for the latency at any percentile using `hs()` queries. For example, you can
 visualize latency at the 95th percentile (`percentile(95, hs(timer.m))`) or the 99.9th percentile
 (`percentile(99.9, hs(timer.m))`). For more information on histogram distributions, see
-<<wavefront-histograms>>, later in this section.
+xref:#wavefront-histograms[Wavefront Histograms], later in this section.
 
 If `publishPercentileHistogram` is disabled, the Wavefront `Timer` produces several
 time series:
