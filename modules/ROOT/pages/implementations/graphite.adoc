@@ -5,7 +5,6 @@
 
 Graphite is one of the most popular current hierarchical metrics systems backed by a fixed-size database, similar in design and purpose to RRDtool. It originated at Orbitz in 2006 and was open sourced in 2008.
 
-include::install.adoc[]
 
 [[configuring]]
 == Configuring
@@ -52,7 +51,6 @@ https://graphite.readthedocs.io/en/latest/tags.html[Tag support] was added to Gr
 If you wish to revert to the traditional hierarchical format, ensure that the `graphiteTagsEnabled` config value is set to `false`.
 The following documentation sections on hierarchical name mapping and metrics prefixing are only applicable if tag support is disabled.
 
-include::hierarchical-name-mapping.adoc[]
 
 [[prefixing-your-metrics]]
 == Prefixing your metrics

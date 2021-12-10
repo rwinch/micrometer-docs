@@ -33,27 +33,22 @@ You should add this dependency alongside any registry implementations you want t
 [[configuring]]
 == Configuring
 
-include::spring-configuring.adoc[leveloffset=+1]
 
 [[web-monitoring]]
 == Web monitoring
 
-include::spring-web.adoc[leveloffset=+1]
 
 [[scheduling]]
 == Scheduling
 
-include::spring-scheduling.adoc[leveloffset=+1]
 
 [[cache-monitoring]]
 == Cache monitoring
 
-include::spring-cache.adoc[leveloffset=+1]
 
 [[data-source-monitoring]]
 == Data source monitoring
 
-include::spring-datasource.adoc[leveloffset=+1]
 
 [[registering-custom-metrics]]
 == Registering custom metrics
@@ -80,14 +75,11 @@ the Spring-managed `MeterRegistry`.
 [[customizing-individual-metrics]]
 == Customizing individual metrics
 
-include::spring-meter-filters.adoc[leveloffset=+1]
 
 [[with-spring-boot-actuator]]
 == With Spring Boot Actuator
 
-include::spring-boot-actuator.adoc[leveloffset=+1]
 
 [[application-properties]]
 == Application properties
 
-include::spring-boot-application-properties.adoc[leveloffset=+1]

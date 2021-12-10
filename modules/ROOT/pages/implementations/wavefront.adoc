@@ -5,7 +5,6 @@
 
 Wavefront is a dimensional monitoring system offered as a SaaS with a full UI, custom query language, and advanced math operations. Wavefront operates on a push model. Metrics may either be pushed through a sidecar process running on the same host (called the Wavefront proxy) or directly to the Wavefront API.
 
-include::install.adoc[]
 
 NOTE: Wavefront support was updated in Micrometer 1.2.0, so the following assumes that you are
 using at least that version.

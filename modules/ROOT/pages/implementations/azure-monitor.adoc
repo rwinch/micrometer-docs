@@ -5,7 +5,6 @@
 
 Azure Monitor is a dimensional time-series SaaS with built-in dashboarding.
 
-include::install.adoc[]
 
 [[configuring]]
 == Configuring
