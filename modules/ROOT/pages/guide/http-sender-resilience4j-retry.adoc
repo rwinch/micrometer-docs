@@ -1,3 +1,4 @@
+[[httpsender-with-resilience4j-retry]]
 = HttpSender with Resilience4j Retry
 
 `HttpSender` is an interface for HTTP clients that are used in meter registries for HTTP-based metrics publication. There

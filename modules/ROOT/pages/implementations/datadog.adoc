@@ -1,3 +1,4 @@
+[[micrometer-datadog]]
 = Micrometer Datadog
 :toc:
 :sectnums:
@@ -5,11 +6,13 @@
 
 Datadog is a dimensional time-series SaaS with built-in dashboarding and alerting.
 
+[[installation-and-configuration]]
 == Installation and Configuration
 
 Micrometer supports shipping metrics to Datadog directly by using its HTTP API or by using DogStatsD through the link:/docs/registry/statsD[StatsD registry].
 The API approach is far more efficient if you need to choose between the two.
 
+[[direct-to-datadog-api-approach]]
 === Direct to Datadog API Approach
 
 For Gradle, add the following implementation:
@@ -71,6 +74,7 @@ You can set the tag by using common tags, as follows:
 registry.config().commonTags("host", "my-host");
 ----
 
+[[through-dogstatsd-approach]]
 === Through DogStatsD Approach
 
 For Gradle, add the following implementation:

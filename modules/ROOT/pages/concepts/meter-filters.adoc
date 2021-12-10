@@ -17,6 +17,7 @@ registry.config()
 
 Meter filters are applied in order, and the results of transforming or configuring a meter are chained.
 
+[[deny-or-accept-meters]]
 == Deny or Accept Meters
 
 The verbose form of an accept or deny filter is:
@@ -42,6 +43,7 @@ new MeterFilter() {
 * `NEUTRAL`: If no other meter filter has returned `DENY`, registration of meters proceeds normally.
 * `ACCEPT`: If a filter returns `ACCEPT`, the meter is immediately registered without interrogating the accept methods of any further filters.
 
+[[convenience-methods]]
 === Convenience Methods
 
 `MeterFilter` provides several convenience static builders for deny and accept type filters:
@@ -59,6 +61,7 @@ new MeterFilter() {
 
 * `denyUnless(Predicate<Meter.Id>)`: Deny all meters that _do not_ match the predicate.
 
+[[chaining-deny-accept-meters]]
 === Chaining Deny Accept Meters
 
 Meter filters are applied in the order in which they are configured on the registry, so it is possible to stack deny and accept filters to achieve more complex rules:
@@ -74,6 +77,7 @@ registry.config()
 
 This achieves another form of whitelisting by stacking two filters together. Only `http` metrics are allowed to exist in this registry.
 
+[[transforming-metrics]]
 == Transforming metrics
 
 The following example shows a transform filter:
@@ -103,6 +107,7 @@ too high cardinality and starts stressing your monitoring system or costing too 
 * `replaceTagValues(String tagKey, Function<String, String> replacement, String... exceptions)`: Replace tag values according to the provided mapping for all matching tag keys. You can use this to reduce the total cardinality of a tag by mapping some portion of tag values to something else.
 * `renameTag(String meterNamePrefix, String fromTagKey, String toTagKey)`: Rename a tag key for every metric that begins with a given prefix.
 
+[[configuring-distribution-statistics]]
 == Configuring Distribution Statistics
 
 `Timer` and `DistributionSummary` contain a set of optional distribution statistics (in addition to the basics of count, total, and max) that you can configure through filters. These distribution statistics include pre-computed percentiles, SLAs, and histograms.

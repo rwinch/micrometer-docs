@@ -1,3 +1,4 @@
+[[micrometer-prometheus]]
 = Micrometer Prometheus
 :toc:
 :sectnums:
@@ -8,6 +9,7 @@ Prometheus is designed to operate on a pull model, periodically scraping metrics
 
 include::install.adoc[]
 
+[[configuring]]
 == Configuring
 
 Prometheus expects to scrape or poll individual application instances for metrics.
@@ -38,6 +40,7 @@ try {
 ----
 <1> The `PrometheusMeterRegistry` has a `scrape()` function that knows how to supply the String data necessary for the scrape. All you have to do is wire it to an endpoint.
 
+[[scrape-format]]
 === Scrape format
 
 By default, the https://prometheus.io/docs/instrumenting/exposition_formats/#text-based-format[Prometheus text format] is returned from the `PrometheusMeterRegistry` `scrape()` method.
@@ -53,6 +56,7 @@ String openMetricsScrape = registry.scrape(TextFormat.CONTENT_TYPE_OPENMETRICS_1
 
 In Spring Boot applications, the https://docs.spring.io/spring-boot/docs/current/actuator-api/htmlsingle/#prometheus[Prometheus Actuator endpoint] supports scraping in either format, defaulting to the Prometheus text format in absence of a specific `Accept` header.
 
+[[the-prometheus-rename-filter]]
 === The Prometheus Rename Filter
 
 In some cases, Micrometer provides instrumentation that overlaps with commonly used Prometheus simple client modules but has chosen a different naming scheme for consistency and portability.
@@ -63,11 +67,13 @@ If you wish to use the Prometheus "standard" names, add the following filter:
 prometheusRegistry.config().meterFilter(new PrometheusRenameFilter());
 ----
 
+[[graphing]]
 == Graphing
 
 This section serves as a quick start to rendering useful representations in Prometheus for metrics originating in Micrometer.
 See the https://prometheus.io/docs/querying/basics[Prometheus docs] for a far more complete reference of what is possible in Prometheus.
 
+[[grafana-dashboard]]
 === Grafana Dashboard
 
 A publicly available Grafana dashboard for Micrometer-sourced JVM and Tomcat metrics is available https://grafana.com/dashboards/4701[here].
@@ -99,6 +105,7 @@ In Spring Boot applications, you can use the https://docs.spring.io/spring-boot/
 management.metrics.tags.application=MYAPPNAME
 ----
 
+[[counters]]
 === Counters
 
 The query that generates a graph for the random-walk counter is
@@ -114,6 +121,7 @@ image::img/prometheus-counter-norate.png[Grafana-rendered Prometheus counter (no
 
 In contrast, without rate normalization, the counter drops back to zero on service restart, and the count increases without bound for the duration of the service's uptime.
 
+[[timers]]
 === Timers
 
 The Prometheus `Timer` produces two counter time series with different names:
@@ -131,6 +139,7 @@ Using the following Prometheus queries, we can graph the most commonly used stat
 .Timer over a simulated service.
 image::img/prometheus-timer.png[Grafana-rendered Prometheus timer]
 
+[[long-task-timers]]
 === Long task timers
 
 The Prometheus query to plot the duration of a long task timer for a serial task is `long_task_timer_sum`. In Grafana, we can set an alert threshold at some fixed point.

@@ -1,3 +1,4 @@
+[[micrometer-graphite]]
 = Micrometer Graphite
 :toc:
 :sectnums:
@@ -7,6 +8,7 @@ Graphite is one of the most popular current hierarchical metrics systems backed 
 
 include::install.adoc[]
 
+[[configuring]]
 == Configuring
 
 The following example configures a Graphite instance:
@@ -43,6 +45,7 @@ management.metrics.export.graphite:
     step: 1m
 ----
 
+[[graphite-tag-support]]
 == Graphite Tag Support
 
 As of Micrometer version 1.4.0, Micrometer supports exporting Graphite metrics by using tags instead of the traditional hierarchical format. By default, metrics are exported by using the tag format, unless any `tagsAsPrefix` values are configured.
@@ -52,6 +55,7 @@ The following documentation sections on hierarchical name mapping and metrics pr
 
 include::hierarchical-name-mapping.adoc[]
 
+[[prefixing-your-metrics]]
 == Prefixing your metrics
 
 To add a prefix to all metrics that go to graphite, use the `GraphiteConfig#tagsAsPrefix` configuration option. This option applies the tag value of a set of common tags as a prefix. For example, if `tagsAsPrefix` contains `application`, and a meter named `myTimer` is created with a tag of `application=APPNAME`, it appears in Graphite as `APPNAME.myTimer`.
@@ -82,6 +86,7 @@ GraphiteMeterRegistry r = new GraphiteMeterRegistry(
 
 NOTE: If you use a custom `HierarchicalNameMapper`, `tagsAsPrefix` is ignored.
 
+[[further-customizing-the-graphitereporter]]
 == Further Customizing the `GraphiteReporter`
 
 We give you the option to configure `GraphiteReporter` yourself if you need further customization. To do so, use this constructor and provide your own `GraphiteReporter`:
@@ -92,10 +97,12 @@ GraphiteMeterRegistry(GraphiteConfig config, Clock clock, HierarchicalNameMapper
                       MetricRegistry metricRegistry, GraphiteReporter reporter)
 ----
 
+[[graphing]]
 == Graphing
 
 This section serves as a quick start to rendering useful representations in Graphite for metrics originating in Micrometer.
 
+[[counters]]
 === Counters
 
 Graphite counters measure mean throughput and one-, five-, and fifteen-minute exponentially-weighted moving average throughputs.

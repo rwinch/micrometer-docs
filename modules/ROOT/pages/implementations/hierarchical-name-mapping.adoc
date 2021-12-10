@@ -1,3 +1,4 @@
+[[hierarchical-name-mapping]]
 == Hierarchical name mapping
 
 Micrometer provides a `HierarchicalNameMapper` interface that governs how a dimensional meter ID is mapped to flat hierarchical names.

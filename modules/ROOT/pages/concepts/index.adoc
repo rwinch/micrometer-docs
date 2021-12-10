@@ -1,9 +1,11 @@
+[[concepts]]
 = Concepts
 Jon Schneider <jschneider@pivotal.io>
 :toc:
 :sectnums:
 :dimensional: true
 
+[[purpose]]
 == Purpose
 
 Micrometer is a metrics instrumentation library for JVM-based applications. It provides a simple facade over the instrumentation clients for the most popular monitoring systems, letting you instrument your JVM-based application code without vendor lock-in. It is designed to add little to no overhead to your metrics collection activity while maximizing the portability of your metrics effort.
@@ -11,22 +13,27 @@ Micrometer is a metrics instrumentation library for JVM-based applications. It p
 Micrometer is _not_ a distributed tracing system or an event logger. Adrian Cole's talk, titled https://www.dotconferences.com/2017/04/adrian-cole-observability-3-ways-logging-metrics-tracing[Observability
 3 Ways], does a great job of highlighting the differences between these different types of systems.
 
+[[supported-monitoring-systems]]
 == Supported Monitoring Systems
 
 include::implementations.adoc[leveloffset=+1]
 
+[[registry]]
 == Registry
 
 include::registry.adoc[leveloffset=+1]
 
+[[meters]]
 == Meters
 
 include::meters.adoc[leveloffset=+1]
 
+[[naming-meters]]
 == Naming Meters
 
 include::naming.adoc[leveloffset=+1]
 
+[[meter-filters]]
 == Meter Filters
 
 include::meter-filters.adoc[leveloffset=+1]
@@ -36,26 +43,32 @@ include::meter-filters.adoc[leveloffset=+1]
 
 include::rate-aggregation.adoc[leveloffset=+1]
 
+[[counters]]
 == Counters
 
 include::counters.adoc[leveloffset=+1]
 
+[[gauges]]
 == Gauges
 
 include::gauges.adoc[leveloffset=+1]
 
+[[timers]]
 == Timers
 
 include::timers.adoc[leveloffset=+1]
 
+[[distribution-summaries]]
 == Distribution Summaries
 
 include::distribution-summaries.adoc[leveloffset=+1]
 
+[[long-task-timers]]
 == Long Task Timers
 
 include::long-task-timers.adoc[leveloffset=+1]
 
+[[histograms-and-percentiles]]
 == Histograms and Percentiles
 
 include::histogram-quantiles.adoc[leveloffset=+1]

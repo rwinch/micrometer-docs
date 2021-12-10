@@ -1,3 +1,4 @@
+[[micrometer-atlas]]
 = Micrometer Atlas
 :toc:
 :sectnums:
@@ -7,6 +8,7 @@ Atlas is an in-memory dimensional time series database with built-in graphing, a
 
 include::install.adoc[]
 
+[[configuring]]
 == Configuring
 
 [source,java]
@@ -40,10 +42,12 @@ management.metrics.export.atlas:
     step: 1m
 ----
 
+[[graphing]]
 == Graphing
 
 This section serves as a quick start to rendering useful representations in Atlas for metrics originating in Micrometer. See the https://github.com/netflix/atlas/wiki[Atlas wiki] for a far more complete reference of what is possible in Atlas.
 
+[[counters]]
 === Counters
 
 Atlas serves up graphs in the form of PNG images (and other https://github.com/Netflix/atlas/wiki/Output-Formats[output formats] as well).
@@ -69,6 +73,7 @@ Host: localhost:7101
 <2> The overall width of the PNG image returned should be 400px.
 <3> Set the y-axis lower limit to 0 so that random perturbation in the walk does not look so dramatic.
 
+[[timers]]
 === Timers
 
 While reading directly from a `Timer` returns a `double`, the underlying value is
@@ -104,6 +109,7 @@ In the preceding example, you can see these two lines plotted on a single dual-a
 image::img/atlas-timer.png[Atlas-rendered timer]
 
 
+[[long-task-timers]]
 === Long task timers
 
 Suppose we had a task that took two minutes to complete when it was expected to complete in less than 70 seconds. A key benefit of long task timers is the ability to receive an alert at the first reporting interval after we have exceeded the threshold. With a regular timer, we would not receive an alert until the first reporting interval after the process completed. If we had a ten-second publishing interval, the regular timer alert would arrive almost a minute after the long task timer alert.

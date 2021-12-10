@@ -1,3 +1,4 @@
+[[micrometer-dynatrace]]
 = Micrometer Dynatrace
 :toc:
 :sectnums:
@@ -8,11 +9,13 @@ It can ingest multi-purpose dimensional time-series data and has built-in dashbo
 
 include::install.adoc[]
 
+[[configuring]]
 == Configuring
 
 For setting up new integrations with Dynatrace, it is recommended to use the latest version of the https://www.dynatrace.com/support/help/dynatrace-api/environment-api/metric-v2/[Dynatrace Metrics API] (v2).
 Dynatrace provides different ways of setting up integrations:
 
+[[using-a-dynatrace-oneagent-installed-on-the-host-preferred-[[bookmark-oneagent-example]]]]
 === Using a Dynatrace OneAgent installed on the host (preferred) [[bookmark-oneagent-example]]
 
 If a Dynatrace OneAgent is installed on the host running Micrometer, metrics can be exported directly using the OneAgent without having to specify an endpoint URI or API token.
@@ -59,6 +62,7 @@ This allows configuring the Dynatrace exporter by using the <<bookmark-available
 To use the Dynatrace metrics exporter for Micrometer in your Spring Boot project, it is enough to include the `runtimeOnly 'io.micrometer:micrometer-registry-dynatrace'` dependency.
 In this default configuration, metrics will be exported to the local OneAgent endpoint.
 
+[[using-a-custom-endpoint]]
 === Using a custom endpoint
 
 If no Dynatrace OneAgent is available on the host, both the Dynatrace Metrics API v2 endpoint and an API token have to be specified.
@@ -118,8 +122,10 @@ management.metrics.export.dynatrace:
     api-token: YOUR_METRICS_INGEST_TOKEN
 ----
 
+[[api-versions]]
 == API Versions
 
+[[api-v2-[[bookmark-apiv2]]]]
 === API v2 [[bookmark-apiv2]]
 
 When the API version is configured to `v2`, the registry will send data using the https://www.dynatrace.com/support/help/dynatrace-api/environment-api/metric-v2/[Metrics API v2].
@@ -231,6 +237,7 @@ DynatraceConfig dynatraceConfig = new DynatraceConfig() {
 
 For more information about the metadata picked up by the Dynatrace metadata enrichment feature, see https://www.dynatrace.com/support/help/how-to-use-dynatrace/metrics/metric-ingestion/ingestion-methods/enrich-metrics/[the Dynatrace documentation].
 
+[[api-v1-legacy-[[bookmark-apiv1]]]]
 === API v1 (Legacy) [[bookmark-apiv1]]
 
 When the apiVersion is configured to `v1`, the registry will send data using the https://www.dynatrace.com/support/help/dynatrace-api/environment-api/metric-v1/custom-metrics/[Dynatrace Timeseries API v1 for custom metrics].

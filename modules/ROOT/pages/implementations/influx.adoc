@@ -1,3 +1,4 @@
+[[micrometer-influx]]
 = Micrometer Influx
 :toc:
 :sectnums:
@@ -7,10 +8,12 @@ The InfluxData suite of tools supports real-time stream processing and storage o
 
 Since Micrometer 1.7, the InfluxMeterRegistry supports the 1.x InfluxDB API as well as the v2 API.
 
+[[configuring]]
 == Configuring
 
 Micrometer supports shipping metrics to InfluxDB directly or through Telegraf through the StatsD registry.
 
+[[direct-to-influxdb]]
 === Direct to InfluxDB
 
 The following example adds the required library in Gradle:
@@ -110,6 +113,7 @@ management.metrics.export.influx:
     user-name: myusername # Login user of the InfluxDB server. InfluxDB v1 only.
 ----
 
+[[through-telegraf]]
 === Through Telegraf
 
 Telegraf is a StatsD agent that expects a modified flavor of the StatsD line protocol.

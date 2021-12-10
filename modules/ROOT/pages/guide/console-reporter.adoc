@@ -1,3 +1,4 @@
+[[passing-through-to-dropwizard-s-console-reporter]]
 = Passing through to Dropwizard's Console Reporter
 :toc:
 

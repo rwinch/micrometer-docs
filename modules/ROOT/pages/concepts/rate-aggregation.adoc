@@ -2,6 +2,7 @@ Micrometer is aware of whether a particular monitoring system expects rate aggre
 
 Not all measurements are reported or best viewed as a rate. For example, gauge values and the active task count long task timers are not rates.
 
+[[server-side]]
 == Server-side
 
 Monitoring systems that perform server-side rate math expect absolute values to be reported at each publishing interval. For example, the absolute count of all increments to a counter since the beginning of the application is sent on each publishing interval.
@@ -18,6 +19,7 @@ If you have achieved zero-downtime deployments (for example, through red-black d
 
 IMPORTANT: For most production purposes, whether it be alerting, automated canary analysis, or other use cases, base your automation off of rate-aggregated data.
 
+[[client-side]]
 == Client-side
 
 Two other classes of monitoring system either:

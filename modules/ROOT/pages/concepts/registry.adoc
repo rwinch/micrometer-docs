@@ -11,6 +11,7 @@ MeterRegistry registry = new SimpleMeterRegistry();
 
 NOTE: A `SimpleMeterRegistry` is autowired for you in Spring-based applications.
 
+[[composite-registries]]
 == Composite Registries
 
 Micrometer provides a `CompositeMeterRegistry` to which you can add multiple registries, letting you publish metrics to more than one monitoring system simultaneously:
@@ -34,6 +35,7 @@ compositeCounter.increment(); <3>
 3. The simple registry counter is incremented, along with counters for any other registries in the composite.
 ====
 
+[[global-registry]]
 == Global Registry
 
 Micrometer provides a static global registry `Metrics.globalRegistry` and a set of static builders for generating meters based on this registry (note that `globalRegistry` is a composite registry):

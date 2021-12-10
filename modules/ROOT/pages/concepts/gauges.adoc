@@ -21,6 +21,7 @@ Map<String, Integer> map = registry.gaugeMapSize("mapGauge", Tags.empty(), new H
 
 All of the different forms of creating a gauge maintain only a _weak reference_ to the object being observed, so as not to prevent garbage collection of the object.
 
+[[manually-incrementing-or-decrementing-a-gauge]]
 == Manually Incrementing or Decrementing a Gauge
 
 A gauge can be made to track any `java.lang.Number` subtype that is settable, such as `AtomicInteger` and `AtomicLong` found in `java.util.concurrent.atomic` and similar types, such as Guava's `AtomicDouble`:
@@ -41,6 +42,7 @@ This pattern should be less common than the `DoubleFunction` form. Remember that
 
 WARNING: Attempting to construct a gauge with a primitive number or one of its `java.lang` object forms is always incorrect. These numbers are immutable. Thus, the gauge cannot ever be changed. Attempting to "`re-register`" the gauge with a different number does not work, as the registry maintains only one meter for each unique combination of name and tags.
 
+[[gauge-fluent-builder]]
 == Gauge Fluent Builder
 
 The interface contains a fluent builder for gauges:
@@ -56,12 +58,14 @@ Gauge gauge = Gauge
 
 Generally the returned `Gauge` instance is not useful except in testing, as the gauge is already set up to track a value automatically upon registration.
 
+[[why-is-my-gauge-reporting-nan-or-disappearing?]]
 == Why is My Gauge Reporting NaN or Disappearing?
 
 It is your responsibility to hold a strong reference to the state object that you are measuring with a `Gauge`. Micrometer is careful to not create strong references to objects that would otherwise be garbage collected. Once the object being gauged is de-referenced and is garbage collected, Micrometer starts reporting a NaN or nothing for a gauge, depending on the registry implementation.
 
 If you see your gauge reporting for a few minutes and then disappearing or reporting NaN, it almost certainly suggests that the underlying object being gauged has been garbage collected.
 
+[[multi-gauge]]
 == Multi-gauge
 
 Micrometer supports one last special type of `Gauge`, called a `MultiGauge`, to help manage gauging a growing or shrinking list of criteria.

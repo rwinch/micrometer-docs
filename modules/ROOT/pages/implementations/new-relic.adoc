@@ -1,3 +1,4 @@
+[[micrometer-new-relic]]
 = Micrometer New Relic
 :toc:
 :sectnums:
@@ -11,6 +12,7 @@ You can find more details in https://github.com/newrelic/micrometer-registry-new
 
 include::install.adoc[]
 
+[[configuring]]
 == Configuring
 
 The following example configures New Relic:
@@ -52,10 +54,12 @@ management.metrics.export.newrelic:
     step: 1m
 ----
 
+[[graphing]]
 == Graphing
 
 This section serves as a quick start to rendering useful representations in New Relic for metrics originating in Micrometer. See the https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql[New Relic NRQL docs] for a far more complete reference of what is possible in New Relic.
 
+[[timers]]
 === Timers
 
 At each publishing interval, the New Relic `Timer` produces a single event with the timer's name and several attributes:

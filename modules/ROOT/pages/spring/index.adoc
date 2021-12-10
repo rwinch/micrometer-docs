@@ -1,3 +1,4 @@
+[[spring-boot-support]]
 = Spring Boot support
 :toc:
 :sectnums:
@@ -7,6 +8,7 @@ WARNING: Spring Boot 1.5.x and Micrometer releases (up to Micrometer 1.3.x) that
 Please upgrade to supported releases of Spring Boot and Micrometer.
 See the latest https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-metrics[Spring Boot reference documentation on metrics] for built-in Spring Boot support after Spring Boot 1.5.
 
+[[installing]]
 == Installing
 Micrometer provides a legacy bridge to Spring Boot 1.5.
 The following example shows the required dependency in Gradle:
@@ -29,26 +31,32 @@ The following example shows the required dependency in Maven:
 
 You should add this dependency alongside any registry implementations you want to use, such as `micrometer-registry-prometheus`.
 
+[[configuring]]
 == Configuring
 
 include::spring-configuring.adoc[leveloffset=+1]
 
+[[web-monitoring]]
 == Web monitoring
 
 include::spring-web.adoc[leveloffset=+1]
 
+[[scheduling]]
 == Scheduling
 
 include::spring-scheduling.adoc[leveloffset=+1]
 
+[[cache-monitoring]]
 == Cache monitoring
 
 include::spring-cache.adoc[leveloffset=+1]
 
+[[data-source-monitoring]]
 == Data source monitoring
 
 include::spring-datasource.adoc[leveloffset=+1]
 
+[[registering-custom-metrics]]
 == Registering custom metrics
 To register custom metrics, you can inject a `MeterRegistry` into your component:
 
@@ -70,14 +78,17 @@ applications, you can encapsulate this suite in a `MeterBinder` implementation. 
 default, metrics from all `MeterBinder` beans are automatically bound to
 the Spring-managed `MeterRegistry`.
 
+[[customizing-individual-metrics]]
 == Customizing individual metrics
 
 include::spring-meter-filters.adoc[leveloffset=+1]
 
+[[with-spring-boot-actuator]]
 == With Spring Boot Actuator
 
 include::spring-boot-actuator.adoc[leveloffset=+1]
 
+[[application-properties]]
 == Application properties
 
 include::spring-boot-application-properties.adoc[leveloffset=+1]

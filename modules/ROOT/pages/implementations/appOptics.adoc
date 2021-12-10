@@ -1,3 +1,4 @@
+[[micrometer-appoptics]]
 = Micrometer AppOptics
 :toc:
 :sectnums:
@@ -7,6 +8,7 @@ AppOptics is a dimensional time-series SaaS with built-in dashboarding.
 
 include::install.adoc[]
 
+[[configuring]]
 == Configuring
 
 The following example configures an AppOptics instance:
@@ -42,10 +44,12 @@ management.metrics.export.appoptics:
     step: 1m
 ----
 
+[[graphing]]
 == Graphing
 
 This section serves as a quick start to rendering useful representations in AppOptics for metrics that originate in Micrometer.
 
+[[timers]]
 === Timers
 
 The AppOptics implementation of `Timer` produces three fields in AppOptics:

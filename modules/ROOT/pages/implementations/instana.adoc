@@ -1,3 +1,4 @@
+[[micrometer-instana]]
 = Micrometer Instana
 Fabian Lange <fabian.lange@instana.com>
 :toc:
@@ -6,6 +7,7 @@ Fabian Lange <fabian.lange@instana.com>
 
 Instana is an automatic application performance management and infrastructure monitoring system.
 
+[[installation-and-configuration]]
 == Installation and Configuration
 
 Instana automatically detects and reports all metrics without the need of any additional dependency or configuration.
@@ -13,6 +15,7 @@ It does so by detecting all instances of `io.micrometer.core.instrument.MeterReg
 
 You can run the Instana agent alongside your application by using Micrometer, and the Instana agent automatically monitors it.
 
+[[supported-metrics]]
 == Supported Metrics
 
 * **Timer**: The total time of recorded events, scaled to milliseconds.

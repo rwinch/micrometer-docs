@@ -1,3 +1,4 @@
+[[micrometer-signalfx]]
 = Micrometer SignalFx
 :toc:
 :sectnums:
@@ -7,6 +8,7 @@ SignalFx is a dimensional monitoring system SaaS with a full UI that operates on
 
 include::install.adoc[]
 
+[[configuring]]
 == Configuring
 
 The following example configures SignalFx:
@@ -42,10 +44,12 @@ management.metrics.export.signalfx:
     step: 1m
 ----
 
+[[graphing]]
 == Graphing
 
 This section serves as a quick start to rendering useful representations in SignalFx for metrics originating in Micrometer. See the https://docs.signalfx.com/en/latest/charts/index.html[SignalFx docs] for a far more complete reference of what is possible in SignalFx.
 
+[[timers]]
 === Timers
 
 At each publishing interval, the SignalFx `Timer` produces several time series in SignalFx:

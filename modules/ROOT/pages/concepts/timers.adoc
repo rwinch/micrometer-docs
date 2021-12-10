@@ -32,6 +32,7 @@ Time window size is the step size of the meter registry, unless expiry in `Distr
 A time window maximum is used to capture maximum latency in a subsequent interval after heavy resource pressure triggers the latency and prevents metrics from being published.
 Percentiles are also time window percentiles (`TimeWindowPercentileHistogram`).
 
+[[recording-blocks-of-code]]
 == Recording Blocks of Code
 
 The `Timer` interface exposes several convenience overloads for recording timings inline, including the following:
@@ -49,6 +50,7 @@ Callable c = timer.wrap(() -> returnValue());
 NOTE: A `Timer` is really a specialized distribution summary that is aware of how to scale durations to the base unit of time of each monitoring system and has an automatically
 determined base unit. In every case where you want to measure time, you should use a `Timer` rather than a `DistributionSummary`.
 
+[[storing-start-state-in-timer-sample]]
 == Storing Start State in `Timer.Sample`
 
 You may also store start state in a sample instance that can be stopped later. The sample records a start time based on the registry's clock. After starting a sample, execute the code to be timed and finish the operation by calling `stop(Timer)` on the sample:
@@ -65,6 +67,7 @@ sample.stop(registry.timer("my.timer", "response", response.status()));
 
 Note how we do not decide the timer to which to accumulate the sample until it is time to stop the sample. This lets us dynamically determine certain tags from the end state of the operation we are timing.
 
+[[the-timed-annotation]]
 == The `@Timed` annotation
 
 The `micrometer-core` modules contains a `@Timed` annotation that frameworks can use to add timing support to either specific types of methods such as those serving web request endpoints or, more generally, to all methods.
@@ -110,6 +113,7 @@ public class ExampleService {
 }
 ----
 
+[[function-tracking-timers]]
 == Function-tracking Timers
 
 Micrometer also provides a more infrequently used timer pattern that tracks two monotonically increasing functions (a function that stays the same or increases over time but never decreases): a count function and a total time function. Some monitoring systems, such as Prometheus, push cumulative values for counters (which apply to both the count and total time functions in this case) to the backend, but others publish the rate at which a counter increments over the push interval. By employing this pattern, you let the Micrometer implementation for your monitoring system choose whether to rate normalize the timer, and your timer remains portable across different types of monitoring systems.
@@ -146,6 +150,7 @@ FunctionTimer.builder("cache.gets.latency", cache,
     .register(registry);
 ----
 
+[[pause-detection]]
 == Pause Detection
 
 Micrometer uses the `LatencyUtils` package to compensate for https://highscalability.com/blog/2015/10/5/your-load-generator-is-probably-lying-to-you-take-the-red-pi.html[coordinated omission] -- extra latency arising from system and VM pauses that skew your latency statistics downward. Distribution statistics, such as percentiles and SLA counts, are influenced by a pause detector implementation that adds additional latency here and there to compensate for pauses.
@@ -164,6 +169,7 @@ registry.config().pauseDetector(new NoPauseDetector());
 
 In the future, we may provide further detector implementations. Some pauses may be able to be inferred from GC logging in some circumstances, for example, without requiring a constant CPU load, however minimal. Also, a future JDK may provide direct access to pause events.
 
+[[memory-footprint-estimation]]
 == Memory Footprint Estimation
 
 Timers are the most memory-consuming meter, and their total footprint can vary dramatically, depending on which options you choose. The following table of memory consumption is based on the use of various features. These figures assume no tags and a ring buffer length of 3. Adding tags adds somewhat to the total, as does increasing the buffer length. Total storage can also vary somewhat depending on the registry implementation.

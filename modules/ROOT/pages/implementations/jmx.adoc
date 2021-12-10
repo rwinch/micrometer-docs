@@ -1,3 +1,4 @@
+[[micrometer-jmx]]
 = Micrometer JMX
 :toc:
 :sectnums:
@@ -11,6 +12,7 @@ Micrometer also sometimes scrapes data from JMX beans for use in reporting metri
 
 include::hierarchical-name-mapping.adoc[]
 
+[[counters]]
 == Counters
 
 JMX counters measure mean throughput and one-, five-, and fifteen-minute exponentially-weighted moving average throughputs.

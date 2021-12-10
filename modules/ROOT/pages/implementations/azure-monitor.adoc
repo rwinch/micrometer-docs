@@ -1,3 +1,4 @@
+[[micrometer-azure-monitor]]
 = Micrometer Azure Monitor
 :toc:
 :sectnums:
@@ -7,6 +8,7 @@ Azure Monitor is a dimensional time-series SaaS with built-in dashboarding.
 
 include::install.adoc[]
 
+[[configuring]]
 == Configuring
 
 The following example configures a Micrometer Azure Monitor:

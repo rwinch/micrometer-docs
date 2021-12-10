@@ -1,3 +1,4 @@
+[[micrometer-humio]]
 = Micrometer Humio
 :toc:
 :sectnums:
@@ -7,6 +8,7 @@ Humio is a dimensional time-series SaaS with built-in dashboarding.
 
 include::install.adoc[]
 
+[[configuring]]
 == Configuring
 
 The following example configures a Humio instance:
@@ -45,10 +47,12 @@ management.metrics.export.humio:
     uri: https://myhumiohost
 ----
 
+[[graphing]]
 == Graphing
 
 This section serves as a quick start to rendering useful representations in Humio for metrics originating in Micrometer.
 
+[[timers]]
 === Timers
 
 The Humio implementation of `Timer` produces four fields in Humio:

@@ -1,3 +1,4 @@
+[[micrometer-cloudwatch]]
 = Micrometer CloudWatch
 Tommy Ludwig <tludwig@vmware.com>
 :toc:
@@ -10,6 +11,7 @@ include::install.adoc[]
 
 NOTE: The `micrometer-registry-cloudwatch2` module uses AWS SDK v2. `micrometer-registry-cloudwatch` is for AWS SDK v1.
 
+[[configuring]]
 == Configuring
 
 The following example configures Micrometer CloudWatch:

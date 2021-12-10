@@ -1,3 +1,4 @@
+[[micrometer-stackdriver-monitoring]]
 = Micrometer Stackdriver Monitoring
 Ray Tsang <saturnism@gmail.com>
 :toc:
@@ -8,6 +9,7 @@ Stackdriver Monitoring is a dimensional time-series SaaS with built-in dashboard
 
 include::install.adoc[]
 
+[[configuring]]
 == Configuring
 
 The following example configures Stackdriver:
@@ -75,6 +77,7 @@ you need not configure this environmental variable. In those environments, a ser
 automatically associated with the application instance. The underlying Stackdriver Monitoring client
 library can automatically detect and use those credentials.
 
+[[stackdriver-labels]]
 == Stackdriver Labels
 
 Micrometer metrics tags are mapped to https://cloud.google.com/monitoring/api/v3/metrics-details#intro-time-series[Stackdriver metrics labels]. With tags and labels, you can further filter or group
@@ -91,6 +94,7 @@ You can also configure resource labels with the `StackdriverConfig` method `reso
 
 IMPORTANT: When using Micrometer across multiple applications/instances, it is necessary that Stackdriver labels are unique per application/instance. Otherwise, you will see errors like `One or more TimeSeries could not be written: One or more points were written more frequently than the maximum sampling period configured`. If using a resource type other than `global`, the resource labels may already make metrics unique per application instance. If not, a common tag with the hostname or platform-provided instance ID may be a good candidate for achieving this.
 
+[[spring-boot]]
 == Spring Boot
 
 Spring Boot provides auto-configuration for Micrometer's StackdriverMeterRegistry. For more information, see the https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-metrics-export-stackdriver[Spring Boot documentation].
@@ -129,6 +133,7 @@ spring.application.name=my-application
 management.metrics.tags.application=${spring.application.name}
 ----
 
+[[graalvm-native-image-compilation]]
 == GraalVM native image compilation
 
 To compile an application using `micrometer-registry-stackdriver` to a https://www.graalvm.org/reference-manual/native-image/[native image using GraalVM], add the https://github.com/GoogleCloudPlatform/native-image-support-java[native-image-support-java] library as a dependency. This will ensure the correct native image configuration is available and avoid errors like `Classes that should be initialized at run time got initialized during image building`.

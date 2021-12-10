@@ -1,3 +1,4 @@
+[[micrometer-ganglia]]
 = Micrometer Ganglia
 :toc:
 :sectnums:
@@ -9,6 +10,7 @@ NOTE: The `micrometer-registry-ganglia` module uses the https://github.com/gangl
 
 include::install.adoc[]
 
+[[configuring]]
 == Configuring
 
 The following example configures a Ganglia instance:
@@ -47,10 +49,12 @@ management.metrics.export.ganglia:
 
 include::hierarchical-name-mapping.adoc[]
 
+[[graphing]]
 == Graphing
 
 This section serves as a quick start to rendering useful representations in Ganglia for metrics originating in Micrometer.
 
+[[counters]]
 === Counters
 
 Ganglia counters measure mean throughput and one-, five-, and fifteen-minute exponentially-weighted moving average throughputs.

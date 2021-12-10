@@ -42,6 +42,7 @@ public class MyApplication {
 }
 ----
 
+[[meter-binders]]
 == Meter Binders
 
 Spring auto-configures the most commonly used binders.
@@ -50,6 +51,7 @@ The `JvmMemoryMetrics` binder is automatically configured to record memory and b
 
 To register other binders with the registry, add them as beans to your application context.
 
+[[atlas]]
 == Atlas
 
 The following listing describes the most common configuration properties you may want to change and their default values
@@ -71,6 +73,7 @@ management.metrics.export.atlas.step=PT1M
 For a full list of configuration properties that can influence Atlas publishing, see
 [`com.netflix.spectator.atlas.AtlasConfig`](https://github.com/Netflix/spectator/blob/master/spectator-reg-atlas/src/main/java/com/netflix/spectator/atlas/AtlasConfig.java) in Netflix's API documentation.
 
+[[prometheus]]
 == Prometheus
 
 By default, if Spring Boot Actuator is on the classpath, an actuator endpoint is wired to `/prometheus` to present a Prometheus scrape with the appropriate format.
@@ -112,6 +115,7 @@ endpoints.prometheus.path=micrometheus
 
 NOTE: By default, the endpoint is secured, so either include authentication in your Prometheus scrape endpoint or unsecure the prometheus endpoint by setting a property, such as `management.security.enabled=false`
 
+[[datadog]]
 == Datadog
 
 The Datadog registry pushes metrics to datadoghq periodically. The following listing shows
@@ -136,6 +140,7 @@ management.metrics.export.datadog.step=PT10S
 For a full list of configuration properties that can influence Datadog publishing, see
 [`io.micrometer.core.instrument.datadog.DatadogConfig`](https://github.com/micrometer-metrics/micrometer/blob/main/implementations/micrometer-registry-datadog/src/main/java/io/micrometer/datadog/DatadogConfig.java).
 
+[[statsd]]
 == StatsD
 
 The StatsD registry eagerly pushes metrics over UDP to a StatsD agent. The following listing shwos the most

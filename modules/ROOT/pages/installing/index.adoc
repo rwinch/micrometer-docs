@@ -24,10 +24,12 @@ Through Micrometer's composite meter registry (described in greater detail in li
 
 If you have not decided on a monitoring system yet and want only to try out the instrumentation SPI, you can add a dependency on `micrometer-core` instead and configure the `SimpleMeterRegistry`.
 
+[[snapshots]]
 == Snapshots
 
 Every successful https://app.circleci.com/pipelines/github/micrometer-metrics/micrometer[build] of Micrometer's `main` and maintenance branches (for example, `1.7.x`) results in the publication of a new snapshot version. You can use the latest snapshot by adding the Maven repository `https://repo.spring.io/libs-snapshot` to your build and using the corresponding snapshot version -- for example, `1.8.0-SNAPSHOT`.
 
+[[milestones]]
 == Milestones
 
 Milestone releases are made available for early testing purposes and are not intended for production use.

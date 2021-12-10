@@ -1,3 +1,4 @@
+[[micrometer-elastic]]
 = Micrometer Elastic
 :toc:
 :sectnums:
@@ -7,6 +8,7 @@ Elasticsearch is an open source search and analytics platform. Metrics stored in
 
 include::install.adoc[]
 
+[[configuring]]
 == Configuring
 
 The following example configures an ElasticSearch instance:

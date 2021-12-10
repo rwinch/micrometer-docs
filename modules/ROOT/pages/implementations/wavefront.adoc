@@ -1,3 +1,4 @@
+[[micrometer-wavefront]]
 = Micrometer Wavefront
 :toc:
 :sectnums:
@@ -10,6 +11,7 @@ include::install.adoc[]
 NOTE: Wavefront support was updated in Micrometer 1.2.0, so the following assumes that you are
 using at least that version.
 
+[[configuring]]
 == Configuring
 
 This section describes how to configure Wavefront when you send data:
@@ -61,10 +63,12 @@ The default proxy configuration pushs metrics and histogram distributions to a W
 
 NOTE: If publishing metrics to a Wavefront proxy, the URI must be expressed in the form of `proxy://HOST:PORT`.
 
+[[graphing]]
 == Graphing
 
 This section serves as a quick start to rendering useful representations in Wavefront for metrics originating in Micrometer. See the https://docs.wavefront.com/query_language_getting_started.html[Wavefront docs] for a far more complete reference of what is possible in Wavefront.
 
+[[counters]]
 === Counters
 
 The query that generates a graph for a random-walk counter is `rate(ts(counter))`.
@@ -81,6 +85,7 @@ Because Wavefront keeps track of cumulative counts across all time, it has the
 advantage of allowing for the selection of a particular time function at query time (for example,
 `rate(ts(counter))` to compute the per-second rate of change).
 
+[[timers]]
 === Timers
 
 The Wavefront `Timer` produces different time series depending on whether or not
