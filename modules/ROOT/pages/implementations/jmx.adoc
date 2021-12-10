@@ -1,6 +1,5 @@
 [[micrometer-jmx]]
 = Micrometer JMX
-:toc:
 :sectnums:
 :system: jmx
 

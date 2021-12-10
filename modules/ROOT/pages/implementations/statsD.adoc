@@ -1,6 +1,5 @@
 [[micrometer-statsd]]
 = Micrometer StatsD
-:toc:
 :sectnums:
 :system: statsd
 

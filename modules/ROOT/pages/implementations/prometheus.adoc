@@ -1,6 +1,5 @@
 [[micrometer-prometheus]]
 = Micrometer Prometheus
-:toc:
 :sectnums:
 :system: prometheus
 

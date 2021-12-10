@@ -1,6 +1,5 @@
 [[spring-boot-support]]
 = Spring Boot support
-:toc:
 :sectnums:
 :dimensional: true
 

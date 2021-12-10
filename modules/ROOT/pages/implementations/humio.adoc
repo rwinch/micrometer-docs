@@ -1,6 +1,5 @@
 [[micrometer-humio]]
 = Micrometer Humio
-:toc:
 :sectnums:
 :system: humio
 

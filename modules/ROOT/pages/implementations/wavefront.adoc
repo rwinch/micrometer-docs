@@ -1,6 +1,5 @@
 [[micrometer-wavefront]]
 = Micrometer Wavefront
-:toc:
 :sectnums:
 :system: wavefront
 

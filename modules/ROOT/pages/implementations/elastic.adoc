@@ -1,6 +1,5 @@
 [[micrometer-elastic]]
 = Micrometer Elastic
-:toc:
 :sectnums:
 :system: elastic
 

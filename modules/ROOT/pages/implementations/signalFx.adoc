@@ -1,6 +1,5 @@
 [[micrometer-signalfx]]
 = Micrometer SignalFx
-:toc:
 :sectnums:
 :system: signalfx
 

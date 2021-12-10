@@ -1,6 +1,5 @@
 [[micrometer-kairosdb]]
 = Micrometer KairosDB
-:toc:
 :sectnums:
 :system: kairos
 

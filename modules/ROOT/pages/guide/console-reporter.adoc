@@ -1,6 +1,5 @@
 [[passing-through-to-dropwizard-s-console-reporter]]
 = Passing through to Dropwizard's Console Reporter
-:toc:
 
 This guide shows how to plug in less commonly used Dropwizard `Reporter` implementations -- in this case, the `ConsoleReporter`.
 

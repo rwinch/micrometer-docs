@@ -1,6 +1,5 @@
 [[micrometer-azure-monitor]]
 = Micrometer Azure Monitor
-:toc:
 :sectnums:
 :system: azure-monitor
 

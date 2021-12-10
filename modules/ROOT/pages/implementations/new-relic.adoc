@@ -1,6 +1,5 @@
 [[micrometer-new-relic]]
 = Micrometer New Relic
-:toc:
 :sectnums:
 :system: new-relic
 

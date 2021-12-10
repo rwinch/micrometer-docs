@@ -1,6 +1,5 @@
 [[micrometer-datadog]]
 = Micrometer Datadog
-:toc:
 :sectnums:
 :system: datadog
 

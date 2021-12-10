@@ -1,6 +1,5 @@
 [[micrometer-appoptics]]
 = Micrometer AppOptics
-:toc:
 :sectnums:
 :system: appoptics
 

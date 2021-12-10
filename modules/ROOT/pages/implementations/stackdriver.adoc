@@ -1,7 +1,6 @@
 [[micrometer-stackdriver-monitoring]]
 = Micrometer Stackdriver Monitoring
 Ray Tsang <saturnism@gmail.com>
-:toc:
 :sectnums:
 :system: stackdriver
 

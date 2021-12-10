@@ -1,6 +1,5 @@
 [[micrometer-dynatrace]]
 = Micrometer Dynatrace
-:toc:
 :sectnums:
 :system: dynatrace
 
