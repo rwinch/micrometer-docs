@@ -1,3 +1,5 @@
+= Installing
+
 Micrometer contains a core library with the instrumentation SPI and an in-memory implementation that does not export data anywhere, a series of modules with implementations for various monitoring systems, and a test module.
 
 To use Micrometer, add the dependency for your monitoring system.

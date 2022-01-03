@@ -5,6 +5,7 @@
 
 Elasticsearch is an open source search and analytics platform. Metrics stored in Elasticsearch can be visualized in Kibana.
 
+include::partial$install.adoc[leveloffset=+1]
 
 [[configuring]]
 == Configuring

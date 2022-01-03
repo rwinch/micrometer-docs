@@ -12,50 +12,5 @@ Micrometer is a metrics instrumentation library for JVM-based applications. It p
 Micrometer is _not_ a distributed tracing system or an event logger. Adrian Cole's talk, titled https://www.dotconferences.com/2017/04/adrian-cole-observability-3-ways-logging-metrics-tracing[Observability
 3 Ways], does a great job of highlighting the differences between these different types of systems.
 
-[[supported-monitoring-systems]]
-== Supported Monitoring Systems
 
-
-[[registry]]
-== Registry
-
-
-[[meters]]
-== Meters
-
-
-[[naming-meters]]
-== Naming Meters
-
-
-[[meter-filters]]
-== Meter Filters
-
-
-[[rate-aggregation]]
-== Rate Aggregation
-
-
-[[counters]]
-== Counters
-
-
-[[gauges]]
-== Gauges
-
-
-[[timers]]
-== Timers
-
-
-[[distribution-summaries]]
-== Distribution Summaries
-
-
-[[long-task-timers]]
-== Long Task Timers
-
-
-[[histograms-and-percentiles]]
-== Histograms and Percentiles
 

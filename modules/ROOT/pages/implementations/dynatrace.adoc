@@ -6,6 +6,7 @@
 https://www.dynatrace.com/[*Dynatrace*] is a Software Intelligence Platform featuring application performance monitoring (APM), artificial intelligence for operations (AIOps), IT infrastructure monitoring, digital experience management (DEM), and digital business analytics capabilities.
 It can ingest multi-purpose dimensional time-series data and has built-in dashboarding. Both SaaS and self-hosted (Managed) deployments are offered.
 
+include::partial$install.adoc[leveloffset=+1]
 
 [[configuring]]
 == Configuring

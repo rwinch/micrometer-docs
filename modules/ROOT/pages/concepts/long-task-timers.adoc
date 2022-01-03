@@ -1,3 +1,6 @@
+[[long-task-timers]]
+= Long Task Timers
+
 The long task timer is a special type of timer that lets you measure time while an event being measured is *still running*. A normal Timer only records the duration *after* the task is complete.
 
 Long task timers publish at least the following statistics:

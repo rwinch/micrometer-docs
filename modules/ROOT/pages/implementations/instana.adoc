@@ -6,6 +6,8 @@ Fabian Lange <fabian.lange@instana.com>
 
 Instana is an automatic application performance management and infrastructure monitoring system.
 
+include::partial$install.adoc[leveloffset=+1]
+
 [[installation-and-configuration]]
 == Installation and Configuration
 

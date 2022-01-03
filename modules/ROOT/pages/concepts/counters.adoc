@@ -1,3 +1,6 @@
+[[counters]]
+= Counters
+
 Counters report a single metric: a count. The `Counter` interface lets you increment by a fixed amount, which must be positive.
 
 TIP: Never count something you can time with a `Timer` or summarize with a `DistributionSummary`! Both `Timer` and `DistributionSummary` always publish a count of events in addition to other measurements.

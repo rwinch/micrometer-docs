@@ -3,8 +3,10 @@
 :sectnums:
 :system: atlas
 
+
 Atlas is an in-memory dimensional time series database with built-in graphing, a custom stack-based query language, and advanced math operations. Atlas originated at Netflix, where it remains the operational metrics solution.
 
+include::partial$install.adoc[leveloffset=+1]
 
 [[configuring]]
 == Configuring

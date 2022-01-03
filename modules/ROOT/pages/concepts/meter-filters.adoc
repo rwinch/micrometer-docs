@@ -1,3 +1,6 @@
+[[meter-filters]]
+= Meter Filters
+
 You can configure each registry with meter filters, which give you greater control over how and when meters are registered and what kinds of statistics they emit. Meter filters serve three basic functions:
 
 1. **Deny** (or **Accept**) meters being registered.

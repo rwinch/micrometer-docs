@@ -9,6 +9,8 @@ https://aws.amazon.com/cloudwatch/[Amazon CloudWatch] is a dimensional time-seri
 
 NOTE: The `micrometer-registry-cloudwatch2` module uses AWS SDK v2. `micrometer-registry-cloudwatch` is for AWS SDK v1.
 
+include::partial$install.adoc[leveloffset=+1]
+
 [[configuring]]
 == Configuring
 

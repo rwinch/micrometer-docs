@@ -9,6 +9,7 @@ Micrometer provides a hierarchical mapping to JMX, primarily as a cheap and port
 
 Micrometer also sometimes scrapes data from JMX beans for use in reporting metrics. This registry implementation is not needed for these uses. Rather, this module is strictly used to _export_ data to JMX.
 
+include::partial$install.adoc[leveloffset=+1]
 
 [[counters]]
 == Counters

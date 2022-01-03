@@ -7,6 +7,8 @@ The InfluxData suite of tools supports real-time stream processing and storage o
 
 Since Micrometer 1.7, the InfluxMeterRegistry supports the 1.x InfluxDB API as well as the v2 API.
 
+include::partial$install.adoc[leveloffset=+1]
+
 [[configuring]]
 == Configuring
 

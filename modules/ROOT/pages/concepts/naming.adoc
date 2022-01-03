@@ -1,3 +1,6 @@
+[[naming-meters]]
+= Naming Meters
+
 Micrometer employs a naming convention that separates lowercase words with a `.` (dot) character. Different monitoring systems have different recommendations regarding naming convention, and some naming conventions may be incompatible between one system and another. Each Micrometer implementation for a monitoring system comes with a naming convention that transforms lowercase dot notation names to the monitoring system's recommended naming convention. Additionally, this naming convention implementation removes special characters that are disallowed by the monitoring system from the metric names and tags. You can override the default naming convention for a registry by implementing `NamingConvention` and setting it on the registry:
 
 ====
